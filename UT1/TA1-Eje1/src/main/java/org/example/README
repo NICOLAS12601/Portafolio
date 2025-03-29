@@ -1,0 +1,13 @@
+UNIDAD TEMÁTICA  1:
+Introducción a JAVA , PARTE I TRABAJO DE APLICACIÓN  1
+Ejercicio #1 Nombres e inicialización de Variables
+(Lectura http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+1. Cree un pequeño programa (clase “PruebaAtributos”) que defina algunos atributos
+(variables de instancia). Intente crear algunos nombres de atributos incorrectos y vea qué tipo
+de error produce el compilador. Utilice como guía las reglas y convenciones de nomenclatura
+(vea el apartado “Naming” en el link anterior)
+2. Extienda el programa para que imprima los valores de los atributos. Deje los atributos sin
+inicializar y observe qué sucede al ejecutar.
+ 3. Intente lo mismo con variables locales y vea qué errores de compilador puede producir
+ (Familiarizarse con los errores comunes de compilación va a hacer que le sea más fácil
+ reconocer bugs en su código.)
