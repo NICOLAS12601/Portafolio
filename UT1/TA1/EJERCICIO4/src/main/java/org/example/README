@@ -1,0 +1,41 @@
+1. Considere el siguiente código:
+
+if (aNumber >= 0)
+if (aNumber == 0)
+System.out.println("first string");
+else System.out.println("second string");
+System.out.println("third string");
+
+a) ¿Qué salida cree que producirá el código si aNumber es 3?
+
+Se imprime en pantalla lo siguiente.
+second string
+third string
+
+
+b) Cree un programa de prueba que contenga el código anterior; haga que aNumber valga 3.
+ ¿Cuál es la salida del programa? ¿Es la que usted predijo?
+ Explique por qué la salida es la que es, o, en otras palabras,
+ ¿cuál es el flujo de control del código provisto?
+
+ Las la que habia predicho, el codigo tiene un if principal
+ que contiene al segundo if y su altenativa else. Como la primera condición
+ es verdadera ingresa al primer if. Luego pregunta por el segundo if, como la condicion
+ no se cumple se ejecuta el else autmaticamente. Luego la ultima sentencia esta por fuera
+ de ambas condiciones por ende siempre se ejecuta.
+
+c) Utilizando sólo espacios y saltos de línea, reformatee el código para hacer que el flujo de control sea más fácil de entender.
+
+if (aNumber >= 0)
+    if (aNumber == 0)
+        System.out.println("first string");
+    else System.out.println("second string");
+System.out.println("third string");
+
+
+d) Utilice llaves, { y } para aclarar aún más el código.
+if (aNumber >= 0){
+    if (aNumber == 0){
+        System.out.println("first string");}
+    else {System.out.println("second string");}}
+System.out.println("third string");
