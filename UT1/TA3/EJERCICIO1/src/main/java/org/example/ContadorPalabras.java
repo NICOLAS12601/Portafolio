@@ -28,7 +28,32 @@ public class ContadorPalabras {
 
         return resultado;}
 
-    }
+    public static int[] contadorDeVocalesYConsonantes(String frase) {
+        int[] resultado= {0,0};// casilla 0 consonantes, casilla 1 vocales
+        int i=0;
+        char vocales[] = {'a', 'e', 'i', 'o', 'u'};
+
+        do {
+            if (Character.isLetter(frase.charAt(i))) {
+                    char letra = Character.toLowerCase(frase.charAt(i));
+                    boolean esConsonante = true;
+                    for (int j = 0; j < vocales.length; j++) {
+                        if (vocales[j] == letra) {
+                            resultado[1]++;//vocal
+                            esConsonante = false;
+                            break;
+                        }
+                    }
+                        if(esConsonante){
+                            resultado[0]++;//consonante
+                        }
+            }
+            i++;
+        }while(i<frase.length());
+
+    return resultado;}
+
+}
 
 
 
