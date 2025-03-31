@@ -7,5 +7,6 @@ public class Main {
         int[] resultado =new int[2];
         resultado=ContadorDePalabras.contadorDeVocalesYConsonantes(frase);
         System.out.println("La cantidad de consonantes es: "+resultado[0]+" y la cantidad de vocales es: "+resultado[1]);
+        System.out.println("La cantidad de palabras con 5 o mas caracteres es: "+ContadorDePalabras.contadorDePalabrasMayores(frase,5));
     }
 }

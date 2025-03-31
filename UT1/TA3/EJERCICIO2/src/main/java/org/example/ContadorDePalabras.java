@@ -58,6 +58,25 @@ public class ContadorDePalabras {
 
         return resultado;}
 
+    public static int contadorDePalabrasMayores(String frase, int tamaño) {
+        int resultado= 0;
+        int aux=0;
+        int i=0;
+        do {
+            if (Character.isLetter(frase.charAt(i))||Character.isDigit(frase.charAt(i))) {
+                    aux++;
+                    if(aux>=tamaño)
+                        resultado++;}
+            if (' ' == frase.charAt(i)) {
+                aux=0;// empieza de nuevo, una nueva palabra
+            }
+            i++;
+        }while(i<frase.length());
+
+
+
+    return resultado;}
+
 }
 
 
