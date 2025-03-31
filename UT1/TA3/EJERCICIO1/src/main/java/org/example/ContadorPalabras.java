@@ -28,6 +28,11 @@ public class ContadorPalabras {
 
         return resultado;}
 
+    /*Este metodo recorre el string letra caracter por caracter, si es una letra la compara
+    esta letra contra las letras almacenadas en array de char que tiene todas las vocales.
+    Si coincide con alguna aumenta la cantidad de vocales si no coincide aumenta las consonantes.
+     */
+
     public static int[] contadorDeVocalesYConsonantes(String frase) {
         int[] resultado= {0,0};// casilla 0 consonantes, casilla 1 vocales
         int i=0;
