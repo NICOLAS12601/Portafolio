@@ -1,6 +1,6 @@
 package org.example;
 
-public static class UtilMath {
+public class UtilMath {
 
     /*Metodo que calcula el factorial de un
     número que le es pasado por parametro*/
