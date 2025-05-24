@@ -1,0 +1,16 @@
+El metodo multsuma recibe 3 parametros a, b y c de tipo double. Primero se declara
+una variable auxiliar llamada result de tipo double, la cual se inicializa en cero.
+Luego se asigna en la variable result la operacion a*b.
+Por ultimo a result se le suma c y se retorna result.
+
+Pre condiciones:
+Los valores a,b y c son de tipo double
+
+Post condiciones:
+
+El metodo devuelve el resultado de la operacion a*b+c de tipo double
+El resultado puede ser negativo o cero.
+
+El orden de tiempo de ejecución de este metodo es O(1) en el peor de los casos.
+Todas las sentencias del metodo son de orden constante, por lo tanto por la regla de la suma
+el tiempo de ejecucion del metodo en el peor de los casos es O(1).
