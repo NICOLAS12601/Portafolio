@@ -11,7 +11,7 @@ public class Main {
         String[] linesaArchivo=contador.obtenerLineas(rutaArchivo);
         int result=contador.cantPalabras(linesaArchivo);
 
-        System.out.println("La cantidad de lineas del texto es : "+result);
+        System.out.println("La cantidad de palabras del texto es : "+result);
 
 
     }
