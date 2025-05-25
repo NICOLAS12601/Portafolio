@@ -1,0 +1,18 @@
+EJ-3)Analizar el ejercicio sobre “palíndromo”. Introducir el código fuente en NetBeans y probarlo
+con diferentes frases. Ver qué sucede al tener letras en mayúsculas y minúsculas, y algunos
+símbolos de puntuación como “.”, “,” y “;”.
+
+String textoLimpio = texto.replaceAll("\\s+", "").toLowerCase();
+Esta linea considera elimina las diferencias entre mayusculas y minusculas Anita =anita
+Tambien elimina los espascios en el medio. Pero no los signos de puntuacion. En esos casos
+no va arrojar verdadero, el metodo.
+
+EJ-4) Se encuentra en el main.
+ El código no funcionaba correctamente lo tuve que modificar, el if preguntaba por si args igual 3
+ademas tuve que crear una variables args y cargarla con la info.
+Luego los resultados se pueden ver en consola corriendo el programa. Y el casteo estaba incorrecto tambien.
+Para usar enteros se deberia castear los String a enteros con el metodo Integer.parseInt("el string");
+
+EJ-5) Lo encontramos en la clase toString
+ Faltaba terminar de imprimir el string, se lo agregue. Luego le avisa al usaurio cuantos digitos hay antes
+y despues del punto, los decimales.

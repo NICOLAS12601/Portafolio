@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="EJERCICIO1-2" />
-        <module name="TA4" />
         <module name="Marcapasos" />
         <module name="TA1-Eje1" />
         <module name="TA1-Eje2" />
@@ -17,5 +16,8 @@
         <module name="EJERCICIO4" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TA4" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
