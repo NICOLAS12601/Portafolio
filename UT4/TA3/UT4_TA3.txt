@@ -1,0 +1,86 @@
+UT4_TA3
+
+Pre-condiciones:
+	-que la estructura del árbol sea correcta
+	-que exista un árbol binario
+
+post-condiciones:
+	-No se modifique la estructura del árbol original
+	-Devuelve un entero representando la altura del árbol
+	-si el árbol es vacío, devuelve una excepción
+
+Casos de Prueba:
+	-para el árbol vacío devuelve excepción
+	-Recorrida el arbol en preo, in , post debe ser el mismo que antes de la ejecución
+	-si la raíz es una hoja, devuelve 0
+	-si el árbol tiene más de un nodo, la altura es >0
+
+
+Pseudocódigo
+
+ObtenerAlturaNodo ()
+Comienzo
+si (hijoIzq == null && hijoDer == null)
+	devolver 0
+sino
+	devolver MAX(hijoIzq.ObtenerAlturaNodo()+1, hijoDer.ObtenerAlturaNodo()+1)
+fin si
+fin
+
+ObtenerAlturaArbol()
+
+comienzo
+si actual == null
+	excepción
+sino
+	actual.ObtenerAlturaNodo()
+fin si
+fin
+
+---------------------------------------------------------
+
+Pre-condiciones:
+	-exista un arbol binario
+	-estructura del arbol es correcta
+
+Post-condiciones:
+	-Devuelve un entero que representa el tamaño del arbol
+	-no cambia la estructura del arbol
+	-si el arbol es vacio, devuelve 0
+	-Si la raíz es una hoja, devuelve 1
+
+CASOS DE PRUEBA
+	-si arbol vacío, devuelve 0
+	-si la raíz es una hoja, devuelve 1
+	-Recorrida el arbol en pre, in , post debe ser el mismo que antes de la ejecución
+
+
+Pseudocodigo
+
+ObtenerTamanoNodo()
+comienzo
+si hijoIzq == null && hijoDer == null
+	devolver 1
+fin si
+si hijoIzq != null && hijoDer != null
+	devolver (hijoIzq.ObtenerTamano +1 + 			hijoDer.ObtenerTamano+1)
+fin si
+si hijoIzq == null
+	devolver hijoDer.ObtenerTamano() +1
+fin si
+si hijoDer == null
+	devolver hijoIzq.ObtenerTamano() +1
+
+fin si
+fin
+
+
+ObtenerTamanoArbol()
+comienzo
+si actual == null
+	devolver 0
+fin si
+devolver actual.ObtenerTamanoNodo()
+fin
+
+Los tests están aplicados en TA2
