@@ -1,0 +1,85 @@
+EJERCICIO 6: Métodos útiles de Strings.
+
+substring(int beginIndex) y substring(int beginIndex,int endIndex)
+
+¿Qué hace? Devuelve una nueva cada que es una subcadena desde beginIndex hasta el final, o hasta endIndex-1.
+
+String s = "Hola Mundo";
+System.out.println(s.substring(5));         // Mundo
+System.out.println(s.substring(0, 4));      // Hola
+
+Split(String regex) y Split (String regex, int limit)
+¿Qué hace? Divide la cadena según el patrón (regex), en el caso de
+la que tiene limit controla cuantas divisiones se hacen.
+
+String s = "uno,dos,tres,cuatro";
+String[] partes = s.split(",");
+for (String p : partes) System.out.println(p);
+// uno dos tres cuatro
+
+String[] partes2 = s.split(",", 2);
+for (String p : partes2) System.out.println(p);
+// uno dos,tres,cuatro
+
+subSequence(int beginIndex, int endIndex)
+
+¿Qué hace? Devuelve una subsecuencia como substring pero de tipo charSequence.
+
+String s = "Aprendiendo Java";
+CharSequence cs = s.subSequence(0, 11);
+System.out.println(cs);   // Aprendiendo
+
+trim()
+
+¿Qué hace? Elimina espacios en blanco al inicio y al final de la cadena.
+String s = "   texto con espacios   ";
+System.out.println(s.trim());  // "texto con espacios"
+
+toLowerCase() y tuUpperCase()
+Convierte a minúscula y a mayuscula repectivamente.
+
+String s = "Hola Mundo";
+System.out.println(s.toLowerCase());  // hola mundo
+System.out.println(s.toUpperCase());  // HOLA MUNDO
+
+indexOf() tiene varias variantes
+Devuelve la posición índice de la primera ocurrencia del carácter o subcadena. También puede empezar a buscar desde un inicio dado.
+
+String s = "banana";
+System.out.println(s.indexOf("a"));         // 1
+System.out.println(s.indexOf("a", 2));      // 3
+System.out.println(s.indexOf("na"));        // 2
+System.out.println(s.indexOf("x"));         // -1 (no está)
+
+lastIndexOf() hace lo mismo pero la búsqueda arranca desde el final.
+
+String s = "banana";
+System.out.println(s.lastIndexOf("a"));     // 5
+System.out.println(s.lastIndexOf("na"));    // 4
+System.out.println(s.lastIndexOf("a", 4));  // 3
+
+contains(CharSequence s)
+Devuelve true si la cadena contien la secuencia indicada
+
+String s = "programación";
+System.out.println(s.contains("grama"));  // true
+System.out.println(s.contains("xyz"));    // false
+
+replace(char oldChar,char newChar) replace(CharSequenceo old, CharSequence new)
+Remplaza un carácter dado o una cadena de caracteres.
+
+String s = "casa blanca";
+System.out.println(s.replace('a', '*'));           // c*s* bl*nc*
+System.out.println(s.replace("blanca", "negra"));  // casa negra
+
+replaceAll(String regex, String replacement)
+remplaza todas la coincidencias del patron regex 
+
+String s = "uno dos tres";
+System.out.println(s.replaceAll("\\s", "-"));  // uno-dos-tres
+
+replaceFirst(String regex, String replacement)
+remplaza solo la primera coincidencia
+
+String s = "uno dos dos tres";
+System.out.println(s.replaceFirst("dos", "DOS"));  // uno DOS dos tres

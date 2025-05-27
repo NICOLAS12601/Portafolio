@@ -1,0 +1,66 @@
+Ejercicio 7 StringBuilder 
+
+StringBuilder es un clase de Java se puede modificar las cadenas de texto sin crear nuevos objetos cada vez que se hace un cambio a diferencia de los String que son inmutables.
+
+Es útil cuando se necesita concatenar o modificar el texto muchas veces, es mas eficiente en rendimiento.
+
+StringBuilder sb1 = new StringBuilder();               // Constructor vacío
+StringBuilder sb2 = new StringBuilder("Hola");         // Constructor con String
+StringBuilder sb3 = new StringBuilder(50);             // Constructor con capacidad inicial
+
+System.out.println(sb1);  // (vacío)
+System.out.println(sb2);  // Hola
+System.out.println(sb3);  // (vacío, capacidad 50)
+
+setLenght(int newLength)
+
+Establece una nueva longitud para la cadena. Si es menor lo recorta si es mayor agrega caracteres nulo 
+
+StringBuilder sb = new StringBuilder("Hola Mundo");
+sb.setLength(4);
+System.out.println(sb);  // Hola
+
+sb.setLength(10);
+System.out.println(sb);  // Hola       (espacios nulos)
+
+ensureCapacity(int minimumCapacity)
+Asegura que la capacidad del StringBuilder sea al menos la especificada.
+
+StringBuilder sb = new StringBuilder();
+sb.ensureCapacity(100);
+System.out.println("Capacidad asegurada: 100");  // No muestra nada visible, pero evita realocaciones futuras
+
+append()
+Agregar texto al final del StringBuilder
+
+StringBuilder sb = new StringBuilder("Hola");
+sb.append(" Mundo");
+System.out.println(sb);  // Hola Mundo
+
+insert(int offset,String str)
+Inserta texto en una posición especifica
+
+StringBuilder sb = new StringBuilder("HolaMundo");
+sb.insert(4, " ");
+System.out.println(sb);  // Hola Mundo
+
+delete(int start, int end)
+Elimina los caracteres en las posiciones indicadas, incluye la posicione star y  excluye la end
+
+StringBuilder sb = new StringBuilder("Hola Mundo");
+sb.delete(4, 5);  // Elimina el espacio
+System.out.println(sb);  // HolaMundo
+
+deleteCharAt(int index)
+Elimina el carácter en la posición dada
+
+StringBuilder sb = new StringBuilder("Hola");
+sb.deleteCharAt(2);
+System.out.println(sb);  // Hoa
+
+reverse()
+invierte la cadena
+
+StringBuilder sb = new StringBuilder("Hola");
+sb.reverse();
+System.out.println(sb);  // aloH

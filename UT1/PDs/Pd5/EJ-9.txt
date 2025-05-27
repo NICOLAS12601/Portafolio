@@ -1,0 +1,11 @@
+EJERCICIO #9.
+Considere la siguiente string:
+String hannah = "Did Hannah see bees? Hannah did.";
+a) ¿qué valor muestra la expresión “hannah.length”?
+b) ¿qué valor es retornado por la invocación del método “hannah.charAt(12)”? 
+c) Escribe una expresión que referencie la letra “b” en la string referida por “hannah".
+
+
+Ra)32
+Rb)e
+Rc)hannah.charAt(15)

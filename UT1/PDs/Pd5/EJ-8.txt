@@ -1,0 +1,9 @@
+Ejercicio 8 
+
+¿Cuál es la capacidad inicial del siguiente stringbuilder?
+StringBuilder sb = new StringBuilder("Able was I ere I saw
+Elba.");
+
+Capacidad inicial = longitud de la cadena + 16
+
+Capacidad inicial = 27 + 16 = 43
