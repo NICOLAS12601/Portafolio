@@ -1,0 +1,2 @@
+Línea 1: Producto escalar = 32
+Línea 2: Producto escalar = 186
