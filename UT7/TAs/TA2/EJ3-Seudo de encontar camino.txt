@@ -1,0 +1,34 @@
+Este seudo código supone una matriz de predecesores P que fue construida luego de aplicar Floyd al grafo. Esta matriz guarda los nodos predecesores en el camino de i a j, asi en la entrada P[i,j] encontraremos un k el cual es necesario pasar por allí para llegar a j partiendo de i. En el caso de que P[i,j]=0 el camino es directo no hay intermediarios, en el caso de que P[i,j]=inf no hay conexión etre i y j.
+Suponemos una lista ordenada de aeropuertos lo cual mantiene el mismo orden que la matriz P, asi el elemento i de la la lista es el mismo elemento i de la matriz. Usamos una cola para ir guardando el camino para llegar a j. 
+
+
+
+ObtenerCamino(etiquetaOrigen, etiquetaDestino)
+Comienzo
+    O <- getIndice(aeropuertos, etiquetaOrigen)
+    D <- getIndice(aeropuertos, etiquetaDestino)
+    
+    Si P[O, D] == inf Entonces
+        Devolver "No hay ruta que conecte " + etiquetaOrigen + " con " + etiquetaDestino
+    FinSi
+
+    cola <- cola vacía 
+    actual <- O
+
+    Mientras P[actual, D] <> 0 hacer 
+        cola.push(actual) 
+        actual <- P[actual, D]
+    FinMientras
+
+    cola.push(D) 
+
+    itinerario <- lista vacía
+
+    Mientras cola no esté vacía hacer
+        idx <- cola.dequeue() 
+        aeropuerto <- aeropuertos[idx]
+        itinerario.add(aeropuerto)
+    FinMientras
+
+    Devolver itinerario
+Fin

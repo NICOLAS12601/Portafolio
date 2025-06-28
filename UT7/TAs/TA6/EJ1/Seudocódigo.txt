@@ -1,0 +1,41 @@
+PARA CADA vértice v EN vertices HACER
+    v.visitado ← false
+FIN PARA
+
+PARA CADA vértice v EN vertices HACER
+    TCamino caminoActual ← nuevo TCamino()
+    caminoActual.agregarVertice(v)
+
+    SI v.tieneCiclo(caminoActual) ENTONCES
+        imprimir caminoActual
+        DEVOLVER true
+    FIN SI
+FIN PARA
+
+DEVOLVER false
+
+Boolean tieneCiclo(TCamino caminoActual) {
+    this.visitado ← true
+
+    PARA CADA TAdyacencia ady EN this.adyacentes HACER
+        TVertice destino ← ady.getDestino()
+
+        SI caminoActual.contiene(destino) ENTONCES
+            caminoActual.agregarVertice(destino) // cerrás el ciclo
+            DEVOLVER true
+        FIN SI
+
+        SI destino.visitado = false ENTONCES
+            caminoActual.agregarVertice(destino)
+
+            SI destino.tieneCiclo(caminoActual) ENTONCES
+                DEVOLVER true
+            FIN SI
+
+            caminoActual.eliminarUltimo() // backtracking
+        FIN SI
+    FIN PARA
+
+    this.visitado ← false
+    DEVOLVER false
+}
